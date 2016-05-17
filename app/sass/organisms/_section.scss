@@ -1,0 +1,95 @@
+//
+// Sections
+// --------------------------------------------------
+
+// Visual
+// --------------------------------------------------
+
+.visual {
+  position: relative;
+  .btn-holder {
+    bottom: 0;
+    left: 0;
+    padding: 0;
+    position: absolute;
+    width: 100%;
+    z-index: 5;
+    @media only screen and (min-width: $lxl-breakpoint + 30px) {bottom: 7px;}
+  }
+}
+
+// Content section
+// --------------------------------------------------
+
+.content-section {
+  padding: 10px 0;
+  @media only screen and (min-width: $lg-breakpoint) {padding: 20px 0 14px;}
+  @media only screen and (min-width: $xl-breakpoint) {padding: 24px 0;}
+  &.with-divider {border-bottom: 1px solid $gray;}
+  &.large-t-indent {
+    padding: 15px 0;
+    @media only screen and (min-width: $lg-breakpoint) {padding: 30px 0 22px;}
+    @media only screen and (min-width: $xl-breakpoint) {padding: 47px 0 22px;}
+  }
+  &.larger-t-indent {
+    padding: 20px 0;
+    @media only screen and (min-width: $lg-breakpoint) {padding: 62px 0 59px;}
+  }
+  &.add-t-indent {
+    padding: 20px 0 30px;
+    @media only screen and (min-width: $xl-breakpoint) {padding: 57px 0 62px;}
+  }
+  &.with-bg {
+    background: image-url('backgrounds/bg-section.jpg') no-repeat;
+    background-size: cover;
+  }
+  &.with-shadow {
+    @include box-shadow(0 3px 3px rgba(0,0,0,0.3));
+    position: relative;
+    z-index: 1;
+  }
+  &.contacts {
+    padding: 20px 0 30px;
+    @media only screen and (min-width: $xl-breakpoint) {
+      margin: 0 0 -15px;
+      padding: 53px 0 62px;
+    }
+    .h2 {
+      margin: 0 0 15px;
+      @media only screen and (min-width: $lg-breakpoint) {margin: 0 0 23px;}
+    }
+  }
+  .btn-primary{
+    @media only screen and (min-width: $lg-breakpoint) {margin: -17px 0 -10px;}
+    &.no-indent {margin: 0;}
+  }
+  .btn-holder {
+    &.top-indent {
+      padding: 10px 0;
+      @media only screen and (min-width: $lg-breakpoint) {padding: 20px 0;}
+      @media only screen and (min-width: $xl-breakpoint) {padding: 26px 0 40px;}
+    }
+  }
+  .lead {
+    margin: 0 0 15px;
+    @media only screen and (min-width: $lg-breakpoint) {margin: 0 0 25px;}
+  }
+  .frame-box {
+    padding: 0 20px 0 0;
+    @media only screen and (min-width: $xl-breakpoint) {padding: 0 35px 0 0;}
+  }
+  .btn {
+    @media only screen and (min-width: $xl-breakpoint) {max-width: 216px;}
+  }
+}
+
+// Info section
+// --------------------------------------------------
+
+.info-section {
+  padding: 22px 0 0;
+  p {
+    margin: 0 0 15px;
+    @media only screen and (min-width: $lg-breakpoint) {margin: 0 0 22px;}
+  }
+}

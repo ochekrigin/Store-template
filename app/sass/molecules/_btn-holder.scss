@@ -1,0 +1,30 @@
+//
+// Buttons box
+// --------------------------------------------------
+
+
+// Base styles
+// --------------------------------------------------
+
+.btn-holder {
+  padding: 10px 0;
+  @media only screen and (min-width: $lg-breakpoint) {padding: 20px 0;}
+  @media only screen and (min-width: $xl-breakpoint) {padding: 34px 0;}
+  &.smaller-indents {
+    padding: 19px 0 4px;
+    @media only screen and (min-width: $lg-breakpoint) {padding: 19px 0;}
+  }
+}
+.btn-holder-cols {
+  border-top: 1px solid $gray;
+  padding: 15px 0 0;
+  @media only screen and (min-width: $xl-breakpoint) {
+    margin: 10px 0 0;
+    padding: 23px 0 0;
+  }
+  @media only screen and (min-width: $lxl-breakpoint) {margin: -8px 0 0;}
+  .btn {
+    margin: 0 0 14px;
+    @media only screen and (min-width: $lg-breakpoint) {margin: 0;}
+  }
+}

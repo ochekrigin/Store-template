@@ -1,0 +1,50 @@
+//
+// Data form
+// --------------------------------------------------
+
+// Base styles
+// --------------------------------------------------
+
+.data-form {
+  .frame-holder & {
+    bottom: 22px;
+    left: 8px;
+    position: absolute;
+    right: 8px;
+    @media only screen and (min-width: $lg-breakpoint) {
+      margin: 0 0 15px;
+      position: static;
+    }
+    @media only screen and (min-width: $xl-breakpoint) {margin: 0;}
+  }
+  .input-holder {
+    @media only screen and (min-width: $xl-breakpoint) {padding: 0 6px 0 0;}
+  }
+  .btn-holder {
+    margin: 0;
+    padding: 0;
+    @media only screen and (min-width: $lg-breakpoint) {margin: 0 0 0 -7px;}
+  }
+  .contacts & {
+    padding: 15px 0 0;
+    @media only screen and (min-width: $lg-breakpoint) {
+      border-left: 1px solid $white;
+      margin: 11px 0 0 26px;
+      padding: 0 0 0 10px;
+    }
+    @media only screen and (min-width: $xl-breakpoint) {padding: 0 0 0 50px;}
+  }
+  &.with-divider {
+    position: relative;
+  	&:after {
+      background: #757575;
+      bottom: 0;
+      content: '';
+      left: -20px;
+      position: absolute;
+      top: 0;
+      width: 1px;
+      @media only screen and (min-width: $xl-breakpoint) {left: -51px;}
+  	}
+  }
+}

@@ -1,0 +1,78 @@
+//
+// Post
+// --------------------------------------------------
+
+// Base styles
+// --------------------------------------------------
+
+.post {
+  background: $white;
+  margin: 0 0 14px;
+  padding: 25px 22px;
+  @media only screen and (min-width: $lg-breakpoint) {margin: 0;}
+  p {
+    display: none;
+    margin: 0 0 20px;
+    @media only screen and (min-width: $lg-breakpoint) {display: block;}
+    &.small-indent {margin-bottom: 5px;}
+  }
+  .btn-holder {
+    padding: 30px;
+    &.no-indent {
+      padding: 10px 0 0;
+      @media only screen and (min-width: $xl-breakpoint) {
+        margin: 0 0 -6px;
+        padding: 18px 0 0;
+      }
+    }
+  }
+  .block & {margin: -20px -29px -2px;}
+  &.with-max-width {max-width: 300px;}
+}
+
+// Item base styles
+// --------------------------------------------------
+
+.item {
+  margin: 0 0 14px;
+  @media only screen and (min-width: $lg-breakpoint) {margin: 0 0 21px;}
+  img {
+    display: block;
+    height: auto;
+    width: 100%;
+  }
+  a {
+    display: block;
+    position: relative;
+    .is-desktop & {
+      &:hover {
+        &:after,
+        .fa-search-plus {opacity: 1;}
+      }
+    }
+    &:after {
+      @include transition(opacity, 1s, ease-out, 0.5s);
+      background: $brand-warning;
+      bottom: 0;
+      content: '';
+      left: 0;
+      opacity: 0;
+      position: absolute;
+      right: 0;
+      top: 0;
+      z-index: 1;
+    }
+  }
+  .fa-search-plus {
+    @include transition(opacity, 1s, ease-out, 0.5s);
+    font-size: $font-size-largeer + 3px;
+    height: 36px;
+    left: 50%;
+    margin: -16px 0 0 -18px;
+    opacity: 0;
+    position: absolute;
+    top: 50%;
+    width: 33px;
+    z-index: 2;
+  }
+}

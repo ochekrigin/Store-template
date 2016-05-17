@@ -1,0 +1,38 @@
+//
+// Logo
+// --------------------------------------------------
+
+.logo {
+  display: block;
+  height: 46px;
+  left: 7px;
+  margin: 0;
+  position: absolute;
+  top: -108px;
+  width: 154px;
+  @media only screen and (min-width: $lg-breakpoint) {top: -56px;}
+  @media only screen and (min-width: $xl-breakpoint) {
+    height: 173px;
+    margin: -58px 0;
+    position: static;
+    width: 310px;
+  }
+  @media only screen and (min-width: $lxl-breakpoint + 30px) {margin: -45px 0 -58px;}
+  &.no-indents {
+    margin: 0;
+    top: -9px;
+  	@media only screen and (min-width: $lg-breakpoint) {
+      height: auto;
+      max-width: 100%;
+      position: static;
+      width: auto;
+  	}
+  }
+}
+img.logo {
+	@media only screen and (min-width: $xl-breakpoint) {
+    display: block;
+    height: auto;
+    max-width: 100%;
+	}
+}

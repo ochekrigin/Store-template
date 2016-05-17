@@ -1,0 +1,304 @@
+//
+// Buttons
+// --------------------------------------------------
+
+
+// Base styles
+// --------------------------------------------------
+
+.btn {
+  @include box-sizing(border-box);
+  @include button-size($padding-base-vertical, $padding-base-horizontal, $font-size-base, $line-height-base, 0);
+  background-image: none; // Reset unusual Firefox-on-Android default style; see https://github.com/necolas/normalize.css/issues/214
+  background: $brand-warning;
+  border: 1px solid transparent;
+  cursor: pointer;
+  display: inline-block;
+  font-size: 14px;
+  font-weight: $btn-font-weight;
+  font-weight: 700;
+  height: 44px;
+  line-height: $line-height-primary;
+  min-width: 180px;
+  overflow: hidden;
+  text-align: center;
+  text-transform: uppercase;
+  touch-action: manipulation;
+  vertical-align: middle;
+  white-space: nowrap;
+  width: 100%;
+  @media only screen and (min-width: $xl-breakpoint) {
+    font-size: 15px;
+    height: 49px;
+    line-height: $line-height-primary + 6px;
+  }
+  .fa-arrow-circle-o-right {
+    margin: 0 0 0 12px;
+    &.xl-with-indent {
+      margin: 0 0 0 12px;
+      &.sm-no-indent {
+        margin: 0;
+        @media only screen and (min-width: $lg-breakpoint) {margin: 0 0 0 4px;}
+        @media only screen and (min-width: $xl-breakpoint) {margin: 0 0 0 12px;}
+      }
+      @media only screen and (min-width: $lg-breakpoint) {margin: 0 0 0 4px;}
+      @media only screen and (min-width: $xl-breakpoint) {margin: 0 0 0 12px;}
+    }
+  }
+  .is-desktop & {
+    &:hover,
+    &:focus,
+    &.focus {
+      color: $btn-default-color;
+      text-decoration: none;
+    }
+  }
+
+  &:active,
+  &.active {
+    @include box-shadow(inset 0 3px 5px rgba(0,0,0,.125));
+    background-image: none;
+    outline: 0;
+  }
+
+  &.disabled,
+  &[disabled],
+  fieldset[disabled] & {
+    cursor: $cursor-disabled;
+    @include opacity(.65);
+    @include box-shadow(none);
+  }
+}
+
+// Alternate buttons
+// --------------------------------------------------
+
+.btn-default {@include button-variant($btn-default-color, $btn-default-bg, $btn-default-border);}
+.btn-primary {
+  @include button-variant($gray-dark, $btn-primary-bg, $gray-dark);
+  background: $white;
+  border: 1px solid $gray-dark;
+  font-size: $font-size-base;
+  font-weight: 400;
+  height: 38px;
+  line-height: $line-height-primary - 5px;
+  min-width: 0;
+  padding: 5px 27px 5px 26px;
+  text-transform: none;
+  width: auto;
+  .fa-angle-left {margin: 0 3px 0 0;}
+  .is-desktop & {
+    &:hover {
+      background: $white;
+      color: #ccc;
+    }
+  }
+  &.btn-primary-larger {
+    border-color: #cecece;
+    height: 45px;
+    line-height: $line-height-primary;
+    padding: 5px 27px 5px 14px;
+    position: relative;
+    text-align: left;
+    width: 100%;
+    @media only screen and (min-width: $lg-breakpoint) {
+      min-width: 199px;
+      width: auto;
+    }
+    &:after {
+      content: '\f107';
+      font-family: $font-awesome;
+      position: absolute;
+      right: 13px;
+      top: 5px;
+    }
+  }
+}
+.btn-rounded {@include border-radius($btn-border-radius-base);}
+.btn-secondary {
+  background: $white;
+  border: 2px solid $gray-dark;
+  color: $gray-dark;
+  height: 44px;
+  line-height: $line-height-primary;
+  @media only screen and (min-width: $xl-breakpoint) {
+    height: 49px;
+    line-height: $line-height-primary + 4px;
+  }
+  .is-desktop & {
+    &:hover {color: #ccc;}
+  }
+  .fa-arrow-circle-o-down {margin: 0 0 0 11px;}
+}
+.without-min-width {
+  min-width: 0;
+  @media only screen and (min-width: $xl-breakpoint + 40px) {min-width: 195px;}
+}
+.btn-gray {
+  background: #d9d9d9;
+  color: $gray-dark;
+  font-size: $font-size-small;
+  height: 29px;
+  line-height: $line-height-primary - 1px;
+  min-width: 0;
+  padding: 0 4px;
+  text-align: center;
+  text-transform: none;
+  width: 27px;
+  .ui-main & {width: auto;}
+  @media only screen and (min-width: $lg-breakpoint) {
+    font-size: $font-size-small + 1px;
+    height: 34px;
+    padding: 0 9px;
+    width: auto;
+  }
+  .fa-clone {
+    margin: 0;
+    @media only screen and (min-width: $lg-breakpoint) {margin-right: 4px;}
+  }
+}
+// Success appears as green
+.btn-success {@include button-variant($btn-success-color, $btn-success-bg, $btn-success-border);}
+// Info appears as blue-green
+.btn-info {@include button-variant($btn-info-color, $btn-info-bg, $btn-info-border);}
+// Warning appears as orange
+.btn-warning {@include button-variant($btn-warning-color, $btn-warning-bg, $btn-warning-border);}
+// Danger and error appear as red
+.btn-danger {@include button-variant($btn-danger-color, $btn-danger-bg, $btn-danger-border);}
+
+// Link buttons
+// -------------------------
+
+// Make a button look and behave like a link
+.btn-link {
+  border-radius: 0;
+  color: $link-color;
+  font-weight: normal;
+
+  &,
+  &:active,
+  &.active,
+  &[disabled],
+  fieldset[disabled] & {
+    @include box-shadow(none);
+    background-color: transparent;
+  }
+  &,
+  &:hover,
+  &:focus,
+  &:active {border-color: transparent;}
+  &:hover,
+  &:focus {
+    background-color: transparent;
+    color: $link-hover-color;
+    text-decoration: $link-hover-decoration;
+  }
+  &[disabled],
+  fieldset[disabled] & {
+    &:hover,
+    &:focus {
+      color: $btn-link-disabled-color;
+      text-decoration: none;
+    }
+  }
+}
+
+// Horizontally space out multiple inline buttons
+.btn + .btn {margin-left: 5px;}
+.btn + .btn-block {
+  margin-left: 0;
+  margin-top: $padding-large-vertical;
+}
+
+
+// Button Sizes
+// --------------------------------------------------
+
+.btn-lg {
+  // line-height: ensure even-numbered height of button next to large input
+  @include button-size($padding-large-vertical, $padding-large-horizontal, $font-size-large, $line-height-large, $btn-border-radius-large);
+}
+.btn-sm {
+  // line-height: ensure proper height of button next to small input
+  @include button-size($padding-small-vertical, $padding-small-horizontal, $font-size-small, $line-height-small, $btn-border-radius-small);
+}
+.btn-xs {
+  @include button-size($padding-xs-vertical, $padding-xs-horizontal, $font-size-small, $line-height-small, $btn-border-radius-small);
+}
+
+// Block button
+// --------------------------------------------------
+
+.btn-block {display: block;}
+
+// Vertically space out multiple block buttons
+.btn-block + .btn-block {margin-top: 5px;}
+
+// Specificity overrides
+input[type="submit"],
+input[type="reset"],
+input[type="button"] {
+  &.btn-block {width: 100%;}
+}
+
+.btn-directional {
+  font-size: $font-size-largeer - 3px;
+  height: 43px;
+  opacity: 0.4;
+}
+.nav-opener {
+  color: $white;
+  display: block;
+  font-size: $font-size-largeer - 3px;
+  position: absolute;
+  right: 15px;
+  top: 12px;
+  @media only screen and (min-width: $lg-breakpoint) {display: none;}
+  .fa {margin: 0;}
+  .fa-bars {
+    .open & {display: none;}
+  }
+  .fa-times {
+    display: none;
+    margin: 2px 0 0;
+    .open & {display: block;}
+  }
+}
+.btn-top {
+  @include border-radius(2px);
+  background: $white;
+  border: 1px solid $gray-dark;
+  bottom: 14px;
+  color: $gray-dark;
+  font-size: $font-size-large - 1px;
+  height: 37px;
+  line-height: $line-height-primary + 4px;
+  position: fixed;
+  right: 14px;
+  text-align: center;
+  width: 37px;
+  z-index: 10;
+  @media only screen and (min-width: $lg-breakpoint) {
+    bottom: 25px;
+    right: 25px;
+  }
+  .is-desktop & {
+    &:hover,
+    &:focus {color: $gray-dark;}
+  }
+  .fa {margin: 0;}
+}
+.opener {
+  background: $gray-dark;
+  color: $white;
+  display: block;
+  margin: 0 0 1px;
+  padding: 12px 50px 9px 19px;
+  position: relative;
+  .fa {
+    margin: -7px 0 0;
+    position: absolute;
+    right: 19px;
+    top: 50%;
+  }
+}

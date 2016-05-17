@@ -1,0 +1,59 @@
+// Sliders
+// --------------------------------------------------
+.collapse {
+  display: none;
+  @media only screen and (min-width: $lg-breakpoint) {display: block;}
+}
+.collapse-box {
+  &.open {
+    .collapse {display: block;}
+  }
+  .heading {
+    cursor: pointer;
+    position: relative;
+    @media only screen and (min-width: $lg-breakpoint) {cursor: default;}
+    &:after {
+      content: '\f107';
+      font-family: $font-awesome;
+      position: absolute;
+      right: 21px;
+      top: 12px;
+      @media only screen and (min-width: $lg-breakpoint) {display: none;}
+    }
+  }
+  &.collapse-open {
+    .heading {
+      &:after {content: '\f106';}
+    }
+  }
+  .m-hidden {
+    display: none;
+    @media only screen and (min-width: $lg-breakpoint) {display: inline;}
+  }
+  .btn-holder {
+    padding: 14px 0 5px;
+    .btn {
+      min-width: 217px;
+      width: auto;
+    }
+  }
+  .collapse {
+    display: none;
+    @media only screen and (min-width: $lg-breakpoint) {display: block;}
+  }
+}
+.inner-collapse {
+  border: 1px solid $gray;
+  display: none;
+  padding: 15px;
+  @media only screen and (min-width: $lg-breakpoint) {
+    border: none;
+    display: block;
+    padding: 0;
+  }
+  .collapse-open & {display: block;}
+}
+.sidebar {
+  margin: 0 0 15px;
+  @media only screen and (min-width: $lg-breakpoint) {margin: 0;}
+}

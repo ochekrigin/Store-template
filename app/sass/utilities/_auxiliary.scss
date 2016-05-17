@@ -1,0 +1,129 @@
+//
+// Auxiliary
+// --------------------------------------------------
+
+// Visibility
+// -------------------------
+
+.is-hidden {display: none !important;}
+.is-visible {display: block !important;}
+.xl-visible {
+  display: none;
+  @media only screen and (min-width: $xl-breakpoint) {display: inline !important;}
+}
+.lg-visible {
+  display: none;
+  @media only screen and (min-width: $lg-breakpoint) {display: inline !important;}
+}
+.lg-hidden {
+  @media only screen and (min-width: $lg-breakpoint) {display: none !important;}
+}
+// Horizontal alignment
+// -------------------------
+
+.align-left {float: left !important;}
+.align-right {float: right !important;}
+.text-left {text-align: left !important;}
+.text-center {text-align: center !important;}
+.text-right {text-align: right !important;}
+.lg-text-right {
+  @media only screen and (min-width: $lg-breakpoint) {text-align: right;}
+}
+
+// Vertical alignment
+// -------------------------
+
+.item-table {
+  display: table;
+  height: 100%;
+  width: 100%;
+}
+.item-cell {
+  display: table-cell;
+  vertical-align: middle;
+}
+
+// Accessibility
+// -------------------------
+
+.accessibility {
+  left: -9999px;
+  position: absolute;
+  top: 0;
+}
+
+// Images
+// -------------------------
+
+.responsive-img {
+  display: block;
+  margin: 0 auto;
+  max-width: 100%;
+}
+
+.placeholder-img {display: block;}
+
+// Embed
+// -------------------------
+
+.embed-responsive {
+  display: block;
+  height: 0;
+  overflow: hidden;
+  padding: 0;
+  position: relative;
+
+  .embed-responsive-item,
+  iframe,
+  embed,
+  object,
+  video {
+    border: 0;
+    bottom: 0;
+    height: 100%;
+    left: 0;
+    position: absolute;
+    top: 0;
+    width: 100%;
+  }
+}
+
+.scroll-holder {
+  height: 100%;
+  overflow: auto;
+}
+
+.wrap {overflow: hidden;}
+
+// Modifier class for 16:9 aspect ratio
+.embed-responsive-16by9 {padding-bottom: 56.25%;}
+
+// Modifier class for 4:3 aspect ratio
+.embed-responsive-4by3 {padding-bottom: 75%;}
+
+// Helpers
+// -------------------------
+
+%clearfix {
+  &:after {
+    clear: both;
+    content: "";
+    display: block;
+  }
+}
+.uppercase {text-transform: uppercase;}
+
+// Color schemes
+// -------------------------
+.dark {
+  background: $black;
+  padding: 10px;
+}
+.light-color {color: $white;}
+.gray-scheme {background: #646464;}
+.light-gray-scheme {background: #ececec;}
+.lightest-grey-scheme {background: #f4f4f4;}
+.dark-grey-scheme {
+  background: $gray-dark;
+  color: $white;
+}

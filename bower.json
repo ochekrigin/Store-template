@@ -1,0 +1,42 @@
+{
+  "name": "adena",
+  "private": true,
+  "dependencies": {
+    "jquery": "~2.*",
+    "jquery-placeholder": "~2.*",
+    "hammerjs": "~2.*",
+    "fancybox": "~2.1.5"
+  },
+  "files": {
+    "jquery-placeholder": {
+      "js": {
+        "cwd": "",
+        "paths": ["jquery.placeholder.js"]
+      }
+    },
+    "fancybox": {
+      "js": {
+        "cwd": "source/",
+        "paths": [
+          "jquery.fancybox.pack.js"
+        ]
+      },
+      "css": {
+        "cwd": "source/",
+        "paths": [
+          "{,helpers/}*.css"
+        ],
+        "dest": "css/fancybox/"
+      },
+      "images": {
+        "cwd": "source/",
+        "paths": [
+          "{,helpers/}*.{gif,png}"
+        ],
+        "dest": "css/fancybox/"
+      },
+      "other": []
+    }
+  },
+  "devDependencies": {}
+}

@@ -1,0 +1,62 @@
+//
+// Gallery
+// --------------------------------------------------
+
+// Base styles
+// --------------------------------------------------
+
+.gallery {
+  overflow: hidden;
+  img {
+    display: inline-block;
+    height: auto;
+    margin: 0 -300px;
+    min-width: 1026px;
+    position: relative;
+    vertical-align: top;
+    width: 100%;
+    @media only screen and (min-width: $lxl-breakpoint) {
+      display: block;
+      margin: 0;
+      min-width: 0;
+    }
+  }
+  .box {
+    bottom: 0;
+    left: 0;
+    position: absolute;
+    top: 0;
+    width: 100%;
+    z-index: 2;
+  }
+  .btn-directional {
+    margin: -4px 0 0;
+    position: absolute;
+    top: 50%;
+    z-index: 5;
+  }
+  .btn-prev {
+    left: 9px;
+    @media only screen and (min-width: $sm-breakpoint) {left: 47px;}
+  }
+  .btn-next {
+    right: 0;
+    @media only screen and (min-width: $sm-breakpoint) {right: 47px;}
+  }
+  .btn {max-width: 216px;}
+}
+.slideset {
+  list-style: none;
+  margin: 0 0 -1px;
+  overflow: hidden;
+  padding: 0;
+  position: relative;
+  .gallery & {height: 460px;}
+  > li {
+    left: 0;
+    position: absolute;
+    text-align: center;
+    top: 0;
+    width: 100%;
+  }
+}

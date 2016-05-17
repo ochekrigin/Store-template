@@ -1,0 +1,118 @@
+//
+// General items
+// --------------------------------------------------
+
+
+// Number
+// --------------------------------------------------
+.number {
+  @include border-radius(50%);
+  background: $white;
+  border: 1px solid $gray-dark;
+  color: $gray-dark;
+  display: block;
+  font-size: $font-size-base;
+  height: 23px;
+  line-height: $line-height-computed + 3px;
+  text-align: center;
+  width: 23px;
+}
+
+// Prices
+// --------------------------------------------------
+.old-price {
+  font-size: $font-size-base - 3px;
+  text-decoration: line-through;
+  @media only screen and (min-width: $lg-breakpoint) {font-size: $font-size-base;}
+}
+.old-price-large {
+  font-size: $font-size-large - 1px;
+  .row & {
+    font-size: $font-size-small - 1px;
+    padding: 0 13px 0 0;
+    @media only screen and (min-width: $lg-breakpoint) {
+      display: inline-block;
+      font-size: 18px;
+      line-height: $line-height-computed + 4px;
+    }
+  }
+}
+.price {
+  display: block;
+  padding: 14px 0 0;
+  &.lg-visible {
+    display: none;
+    @media only screen and (min-width: $lg-breakpoint) {display: block !important;}
+  }
+}
+.price-large {
+  font-size: $font-size-large - 1px;
+  margin: 4px 0 -4px -14px;
+  padding: 0;
+  @media only screen and (min-width: $lg-breakpoint) {font-size: $font-size-large + 5px;}
+}
+.price-largest {
+  font-size: $font-size-largeer + 3px;
+  line-height: $line-height-primary + 3px;
+  .row & {
+    display: block;
+    font-size: $font-size-base + 3px;
+    line-height: $line-height-computed - 3px;
+    padding: 0;
+    vertical-align: bottom;
+    @media only screen and (min-width: $lg-breakpoint) {
+      display: inline-block;
+      font-size: $font-size-largeer + 3px;
+      line-height: $line-height-primary + 3px;
+      padding: 14px 0 0;
+    }
+  }
+}
+
+// Message
+// --------------------------------------------------
+.message {
+  display: inline-block;
+  font-size: $font-size-small + 1px;
+  margin: 0;
+  padding: 0 0 0 18px;
+  position: relative;
+  vertical-align: bottom;
+  @media only screen and (min-width: $lg-breakpoint) {font-size: $font-size-base - 3px;}
+  @media only screen and (min-width: $xl-breakpoint) {margin: 0 -10px 0 -6px;}
+  @media only screen and (min-width: $lxl-breakpoint) {
+    margin: 0 -16px 0 -10px;
+    font-size: $font-size-base;
+  }
+  @media only screen and (min-width: $lxl-breakpoint + 150px) {margin: 0 -4px 0 -7px;}
+  &.success {
+    color: $brand-success;
+    &:after {
+      content: '\f00c';
+      font-family: $font-awesome;
+      left: 0;
+      position: absolute;
+      top: 0;
+    }
+  }
+}
+.message-horizontal {
+  margin: -2px 0 8px;
+  @media only screen and (min-width: $md-breakpoint) {margin: -4px 0 15px;}
+}
+
+// Address
+// --------------------------------------------------
+address {
+  font-style: normal;
+  @media only screen and (min-width: $lg-breakpoint) {padding: 15px 0 0;}
+  &.no-indent {padding: 0;}
+  span {display: block;}
+}
+.text-show {
+  .opened & {display: none;}
+}
+.text-close {
+  display: none;
+  .opened & {display: block;}
+}

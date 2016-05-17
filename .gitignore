@@ -1,0 +1,13 @@
+# use glob syntax.
+syntax: glob
+
+.sass-cache
+node_modules
+bower_components
+input
+app/*.html
+app/css/*.css
+.ftppass
+sliceart_modules/host.js
+build
+markup

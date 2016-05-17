@@ -1,0 +1,256 @@
+//
+// Lists
+// --------------------------------------------------
+
+// Base styles
+// --------------------------------------------------
+
+.list {
+  @extend %clearfix;
+  font-size: $font-size-base;
+  height: 1%;
+  list-style: none;
+  margin: 0 -6px;
+  padding: 0;
+  @media only screen and (min-width: $lg-breakpoint) {font-size: $font-size-base - 2px;}
+  @media only screen and (min-width: $xl-breakpoint) {
+    font-size: $font-size-base;
+    margin: 0 -12px;
+  }
+  > li {
+    padding: 0 6px;
+    position: relative;
+    @media only screen and (min-width: $md-breakpoint) {float: left;}
+    @media only screen and (min-width: $xl-breakpoint) {padding: 0 12px;}
+    &.active,
+    &:hover {
+      .is-desktop & {
+        > a {color: $brand-warning;}
+      }
+    }
+  }
+  &.gray-list {
+    color: $gray-dark;
+    a {color: $gray-dark;}
+  }
+  &.options {
+    background: #494949;
+    margin: 0 -14px -10px;
+    padding: 9px 9px 11px;
+    @media only screen and (min-width: $lg-breakpoint) {
+      background: inherit;
+      float: right;
+      margin: 0;
+      padding: 0;
+    }
+    > li {
+      @include box-sizing(border-box);
+      float: left;
+      width: 50%;
+      @media only screen and (min-width: $lg-breakpoint) {width: auto;}
+    }
+  }
+}
+
+// Vertical styles
+// --------------------------------------------------
+
+.vertical-list {
+  > li {
+    border-top: 1px solid $brand-primary-light;
+    float: none;
+    padding: 0;
+  }
+  a {
+    display: block;
+    padding: 17px 40px 15px 22px;
+  }
+  .fa-angle-right,
+  .fa-arrow-circle-o-right {
+    color: #1a0000;
+    font-size: $font-size-base;
+    margin: -8px 0 0;
+    position: absolute;
+    right: 10px;
+    top: 50%;
+    @media only screen and (min-width: $xl-breakpoint) {right: 17px;}
+  }
+}
+
+// Breadcrumbs styles
+// --------------------------------------------------
+
+.breadcrumbs {
+  color: $brand-warning;
+  list-style: none;
+  margin: 0 0 0 -15px;
+  padding: 0 0 10px;
+  @media only screen and (min-width: $lg-breakpoint) {padding: 0;}
+  > li {
+    float: left;
+    padding: 0 20px 0 15px;
+    position: relative;
+  }
+  .fa-angle-right {
+    color: $gray-dark;
+    margin: 0;
+    position: absolute;
+    right: 0;
+    top: 3px;
+  }
+  a {color: $gray-dark;}
+}
+
+// Social styles
+// --------------------------------------------------
+
+.social {
+  margin: 0 -7px 0 -6px;
+  > li {
+    float: left;
+    padding: 0 7px 0 6px;
+  }
+  a {
+    color: $gray-dark;
+    display: block;
+    font-size: $font-size-base + 3px;
+  }
+  .fa {margin: 0;}
+}
+
+// Definition list styles
+// --------------------------------------------------
+
+.definition-list {
+  font-size: $font-size-base - 2px;
+  margin: 0 0 -6px;
+  overflow: hidden;
+  @media only screen and (min-width: $lg-breakpoint) {margin: 0;}
+  @media only screen and (min-width: $xl-breakpoint) {font-size: $font-size-base;}
+  .social {margin-top: -3px;}
+  dt {
+    float: left;
+    margin: 0 12px 0 0;
+  }
+  dd {
+    margin: 0;
+    float: left;
+  }
+  &.horizontal {
+    margin: 0 0 15px;
+    @media only screen and (min-width: $lg-breakpoint) {margin: 0 0 23px;}
+    &.total-list {margin: 0 0 16px;}
+    dt {margin: 0 5px 0 0;}
+    dd {float: none;}
+    a {
+      color: $gray-dark;
+      .dark-grey-scheme & {color: $white;}
+    }
+  }
+}
+
+// Total list styles
+// --------------------------------------------------
+
+.total-list {
+  min-width: 300px;
+  &.large-size {
+    border-top: 1px solid #cecece;
+    padding: 10px 0 0 0;
+    @media only screen and (min-width: $lg-breakpoint) {padding: 10px 0 0 0;}
+    @media only screen and (min-width: $xl-breakpoint) {padding: 10px 6px 0 0;}
+    @media only screen and (min-width: $lxl-breakpoint + 10px) {padding: 10px 6px 0 0;}
+    dd {font-size: $font-size-large + 5px;}
+  }
+  dt {
+    @include box-sizing(border-box);
+    display: inline-block;
+    float: none;
+    margin: 0 -4px 0 0 !important;
+    padding: 0 15px 2px 0;
+    text-align: right;
+    vertical-align: middle;
+    width: 50%;
+  }
+  dd {
+    @include box-sizing(border-box);
+    display: inline-block;
+    margin: 0 -4px 0 0;
+    padding: 0 0 2px 15px;
+    text-align: left;
+    vertical-align: middle;
+    width: 50%;
+  }
+}
+
+// Bullet list styles
+// --------------------------------------------------
+
+.bullet-list {
+  margin: 0 0 15px;
+  @media only screen and (min-width: $lg-breakpoint) {margin: 0 0 23px;}
+  > li {
+    border: none;
+    padding: 0 0 1px 17px;
+    position: relative;
+    &:after {
+      content: '\f0da';
+      font-family: $font-awesome;
+      left: 0;
+      position: absolute;
+      top: 0;
+    }
+  }
+}
+
+// Check list styles
+// --------------------------------------------------
+
+.check-list {
+  font-size: $font-size-small - 1px;
+  line-height: $line-height-computed - 3px;
+  margin: 0 0 18px;
+  @media only screen and (min-width: $md-breakpoint) {
+    font-size: $font-size-base;
+    line-height: $line-height-computed - 1px;
+    margin: 0 0 13px;
+  }
+  > li {
+    border: none;
+    padding: 0 0 0 18px;
+    position: relative;
+    @media only screen and (min-width: $md-breakpoint) {padding: 0 0 0 24px;}
+    &:after {
+      content: '\f00c';
+      font-family: $font-awesome;
+      left: 0;
+      position: absolute;
+      top: 0;
+    }
+  }
+}
+
+// Large list styles
+// --------------------------------------------------
+
+.list-pager {
+  line-height: $line-height-computed - 5px;
+  margin: 14px -9px 0;
+  @media only screen and (min-width: $lg-breakpoint) {float: right;}
+  .fa {margin: 0 4px;}
+  a {color: $gray-dark;}
+  > li {
+    border-left: 1px solid $gray;
+    float: left;
+    padding: 0 9px;
+    &:first-child {border: none;}
+    &.dote {
+      background: $white;
+      border: none;
+      margin: 0 -3px;
+      padding: 0;
+      position: relative;
+      z-index: 1;
+    }
+  }
+}

@@ -1,0 +1,54 @@
+//
+// Lightbox
+// --------------------------------------------------
+
+// Base styles
+// --------------------------------------------------
+
+.fancybox-skin {
+  @include border-radius(0);
+  margin: 40px 0 0;
+  padding: 0 !important;
+  .fancybox-close {
+    background: none;
+    color: #c1c1c1;
+    font-size: $font-size-large + 4px;
+    height: 18px;
+    right: -2px;
+    top: -39px;
+    width: 18px;
+    &:after {
+      content: '\f00d';
+      font-family: $font-awesome;
+      left: 0;
+      position: absolute;
+      top: 0;
+    }
+  }
+  .fancybox-prev span,
+  .fancybox-next span {
+    background: none;
+    color: #c1c1c1;
+    font-size: $font-size-largeer - 3px;
+  }
+  .fancybox-prev span {
+    left: 28px;
+    &:after {
+      content: '\f060';
+      font-family: $font-awesome;
+      left: 0;
+      position: absolute;
+      top: 0;
+    }
+  }
+  .fancybox-next span {
+    right: 28px;
+    &:after {
+      content: '\f061';
+      font-family: $font-awesome;
+      left: 0;
+      position: absolute;
+      top: 0;
+    }
+  }
+}

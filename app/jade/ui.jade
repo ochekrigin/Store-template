@@ -1,0 +1,383 @@
+extends _modules/layout
+block body
+  //wrapper starts
+  #wrapper(data-add-class-parent)
+    header.ui-header
+      .ui-container
+        strong.ui-header-title Adena Styleguide
+    //ui holder starts
+    main.ui-main
+      .ui-container
+        #color-palette
+          strong.ui-main-title Color Palette
+          .grid-row
+            .grid-col-sm-12.grid-col-lg-5
+              .ui-color-box.ui-color-primary
+                .ui-color-heading Primary Color
+                .ui-color-box-example
+            .grid-col-sm-12.grid-col-lg-5
+              .ui-color-box.ui-color-primary-light
+                .ui-color-heading Primary Light Color
+                .ui-color-box-example
+            .grid-col-sm-12.grid-col-lg-5
+              .ui-color-box.ui-color-success
+                .ui-color-heading Success Color
+                .ui-color-box-example
+            .grid-col-sm-12.grid-col-lg-5
+              .ui-color-box.ui-color-info
+                .ui-color-heading Info Color
+                .ui-color-box-example
+            .grid-col-sm-12.grid-col-lg-5
+              .ui-color-box.ui-color-warning
+                .ui-color-heading Warning Color
+                .ui-color-box-example
+            .grid-col-sm-12.grid-col-lg-5
+              .ui-color-box.ui-color-danger
+                .ui-color-heading Danger Color
+                .ui-color-box-example
+        #typography
+          strong.ui-main-title Typography
+          #headings
+            strong.ui-title Headings
+            h1.h1 Heading 1
+            h2.h2 Heading 2
+            h2.h2.middle-b-indent Heading 2 with middle indent
+            h2.h2.small-b-indent Heading 2 with small indent
+            h2.h2.smaller-b-indent Heading 2 with smaller indent
+            h2.sub-title Sub title
+            h3.h3 Heading 3
+            h4 Heading 4
+            h5 Heading 5
+            h6 Heading 6
+            strong.ui-title Headings with secondary text
+            h1
+              | Heading 1
+              small
+                |  Secondary Text
+            h2
+              | Heading 2
+              small
+                |  Secondary Text
+            h3
+              | Heading 3
+              small
+                |  Secondary Text
+            h4
+              | Heading 4
+              small
+                |  Secondary Text
+            h5
+              | Heading 5
+              small
+                |  Secondary Text
+            h6
+              | Heading 6
+              small
+                |  Secondary Text
+          #paragraphs
+            strong.ui-title Paragraphs
+            strong.ui-sub-title Body copy
+            p
+              | Lorem ipsum dolor sit amet, consectetur adipisicing elit. Perferendis inventore iusto autem harum quisquam assumenda optio, officiis nisi culpa labore error earum cupiditate modi dolorum vel consequatur! Pariatur, quae, suscipit.
+            strong.ui-sub-title Lead body copy
+            p.lead
+              | Lorem ipsum dolor sit amet, consectetur adipisicing elit. Perferendis inventore iusto autem harum quisquam assumenda optio, officiis nisi culpa labore error earum cupiditate modi dolorum vel consequatur! Pariatur, quae, suscipit.
+            p.lead-large-indent
+              | Lorem ipsum dolor sit amet, consectetur adipisicing elit. Perferendis inventore iusto autem harum quisquam assumenda optio, officiis nisi culpa labore error earum cupiditate modi dolorum vel consequatur! Pariatur, quae, suscipit.
+        #atoms
+          strong.ui-main-title Atoms
+          #links
+            strong.ui-title Links
+            strong.ui-sub-title Link default
+            .dark
+              a.link(href="#") Link default
+            strong.ui-sub-title Link orange
+            a.link.link-orange(href="#") Link orange
+          #number
+            strong.ui-title Number
+            strong.ui-sub-title Number
+            span.number 2
+          #buttons
+            strong.ui-title Buttons
+            strong.ui-sub-title Button Default
+            a(href="#").btn Default button
+            strong.ui-sub-title Button Default Rounded
+            a(href="#").btn.btn-rounded Default button rounded
+            strong.ui-sub-title Button Default
+            a(href="#").btn.btn-primary Primary btn
+            strong.ui-sub-title Button Secondary
+            a(href="#").btn.btn-secondary Secondary btn
+            strong.ui-sub-title Button Gray
+            a(href="#").btn.btn-gray Secondary btn
+          #form-elements
+            strong.ui-title Form elements
+            strong.ui-sub-title Input types
+            input(type="text" placeholder="Text Input").form-element
+            input(type="password" placeholder="Password input").form-element
+            input(type="email" placeholder="Email input").form-element
+            input(type="url" placeholder="Url input").form-element
+            input(type="tel" placeholder="Tel input").form-element
+            input(type="search" placeholder="Search input").form-element
+            include _atoms/checkbox
+            include _atoms/radio
+            strong.ui-sub-title Error input
+            .row-box.error
+              input(type="text" placeholder="Input value").form-element.secondary-element
+              .error-message
+                i.fa.fa-hand-paper-o
+                | Error message / notice
+            strong.ui-sub-title Success input
+            .row-box.success
+              input(type="text" value="Input value").form-element.secondary-element
+            strong.ui-sub-title Wrong value
+            .row-box.error
+              input(type="text" placeholder="Input value" value="Wrong value").form-element.secondary-element
+            strong.ui-sub-title Textarea
+            textarea(cols="30" rows="10" placeholder="Textarea").form-element
+            strong.ui-sub-title Select
+            .dark
+              .select-holder
+                select
+                  option Select box
+                  option Select item 1
+                  option Select item 2
+        #molecules
+          strong.ui-main-title Molecules
+          #items
+            strong.ui-title Products
+            strong.ui-sub-title Products item default
+            article.post(itemscope itemtype="http://schema.org/Product").with-max-width
+              figure.media
+                .img-holder
+                  img(src="images/content/img-post-1.jpg" width="380" height="220" alt="img-description")
+                figcaption.caption.light-gray-scheme
+                  h3(itemprop="name") Upiditate non provident, similique sunt in culpa sunt in
+                  p.small-indent(itemprop="description") At vero eos et accusamus et iusto odio dignissimos ducimus qui blan <br>ditiis.
+                  .grid-row.no-b-indent(itemprop="offers" itemscope itemtype="http://schema.org/Offer")
+                    .grid-col-xs-15.grid-col-xl-4.inline-block
+                      .old-price 1995,95 
+                    .grid-col-xs-15.grid-col-xl-5.inline-block
+                      .price.price-large 1892,95
+                    .grid-col-xs-15.grid-col-xl-6.inline-block
+                      .message.success Op voorraad
+                  .btn-holder.no-indent
+                    a.btn.btn-rounded.white-color.without-min-width(href="#")
+                      span.is-hidden.lg-visible Conversion button
+                      i.fa.fa-arrow-circle-o-right.xl-with-indent
+            strong.ui-sub-title Products without price
+            article.post.with-max-width(itemscope itemtype="http://schema.org/NewsArticle")
+              figure.media
+                .img-holder
+                  img(src="images/content/img-post-1.jpg" width="380" height="220" alt="img-description")
+                figcaption.caption
+                  h3(itemprop="headline") Upiditate non provident, similique sunt in culpa sunt in culpa
+                  p(itemprop="description") At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi sint occaecati cupiditate non provident, similique sunt in culpa qui officia deserunt mollitia animi, id est laborum et dolorum fuga.
+                  a.btn.btn-rounded(href="#")
+                    | Conversion button
+                    i.fa.fa-arrow-circle-o-right
+          #media
+            strong.ui-title Media
+            strong.ui-sub-title Media horizontal
+            figure.media.horizontal.with-max-width
+              img(src="images/content/img-post-3.jpg" width="382" height="263" alt="img-description")
+              figcaption.caption
+                a.btn.btn-gray(href="http://farm2.staticflickr.com/1617/24108587812_6c9825d0da_b.jpg" data-fancybox-group="gallery1").fancybox
+                  i.fa.fa-clone
+                  span.lg-visible 2 foto’s
+          #table
+            strong.ui-title Table
+            strong.ui-sub-title Table default
+            table.table
+              thead
+                tr
+                  th.text-left Download direct de nieuwste folders
+                  th.text-right Toegevoegd op
+              tbody
+                tr.odd
+                  td.text-left
+                    a(href="#")
+                      i.fa.fa-cloud-download
+                      | Company magazine 2016 (pdf)
+                  td.text-right 03 april 2016
+                tr
+                  td.text-left
+                    a(href="#")
+                      i.fa.fa-file-pdf-o
+                      | Company magazine 2016 (pdf)
+                  td.text-right 03 april 2016
+          #gallery-item
+            strong.ui-title Gallery item
+            strong.ui-sub-title Galery item
+            article.item
+              a(href="http://farm2.staticflickr.com/1617/24108587812_6c9825d0da_b.jpg" data-fancybox-group="gallery1").fancybox
+                img(src="images/content/img-item-gallery-1.jpg" width="200" height="157" alt="img-description")
+                i.fa.fa-search-plus
+          #list
+            strong.ui-title Lists
+            strong.ui-sub-title General list
+            .dark
+              ul.list
+                li
+                  a(href="#")
+                    i.fa.fa-check
+                    | Een unieke USP regel
+                li
+                  a(href="#")
+                    i.fa.fa-check
+                    | Een unieke USP regel
+                li
+                  a(href="#")
+                    i.fa.fa-check
+                    | Een unieke USP regel
+            
+            strong.ui-sub-title Breadcrumbs list
+            ul.breadcrumbs.list(vocab="http://schema.org/" typeof="BreadcrumbList")
+              li(property="itemListElement" typeof="ListItem")
+                a(href="#" property="item" typeof="WebPage")
+                  span(property="name") Homepage
+                  meta(property="position" content="1")
+                i.fa.fa-angle-right
+              li(property="itemListElement" typeof="ListItem")
+                a(href="#" property="item" typeof="WebPage")
+                  span(property="name") Subpage
+                  meta(property="position" content="2")
+                i.fa.fa-angle-right
+              li(property="itemListElement" typeof="ListItem")
+               span(property="name") Subpage
+               meta(property="position" content="3")
+            strong.ui-sub-title Definition list with social list
+            dl.definition-list
+              dt Deel deze pagina
+              dd
+                ul.list.social
+                  li
+                    a(href="#")
+                      i.fa.fa-facebook-official
+                  li
+                    a(href="#")
+                      i.fa.fa-twitter-square
+                  li
+                    a(href="#")
+                      i.fa.fa-whatsapp
+                  li
+                    a(href="#")
+                      i.fa.fa-pinterest
+            strong.ui-sub-title Definition list horizontal view
+            dl.definition-list.horizontal
+              dt Tel:
+              dd
+                a(href="tel:0987654321") 0987 654321
+              dt E-mail:
+              dd
+                a(href="tel:info@company.com") info@company.com
+            strong.ui-sub-title Vertical list
+            ul.bullet-list.list.vertical-list
+              li Quos dolores et quas molestias excepturi
+              li Quos dolores et quas molestias excepturi
+              li Quos dolores et quas molestias excepturi
+            strong.ui-sub-title Pager list
+            ul.list.list-pager
+              li
+                a(href="#")
+                  i.fa.fa-angle-left
+                  | vorige
+              li
+                a(href="#") 1
+              li
+                a(href="#") 2
+              li.dote ...
+              li
+                a(href="#") 6
+              li
+                a(href="#")
+                  | volgende
+                  i.fa.fa-angle-right
+            strong.ui-sub-title Check list
+            ul.list.vertical-list.check-list
+              li Een unieke USP regel
+              li Een unieke USP regel
+              li Een unieke USP regel
+        #templates
+          strong.ui-main-title Templates
+          strong.ui-sub-title Layout
+          #layout
+            .grid-row
+              .grid-col-lg-15
+                .pre .grid-col-lg-15
+            .grid-row
+              .grid-col-lg-7
+                .pre .grid-col-lg-7
+              .grid-col-lg-8
+                .pre .grid-col-lg-8
+            .grid-row
+              .grid-col-lg-5
+                .pre .grid-col-lg-5
+              .grid-col-lg-10
+                .pre .grid-col-lg-10
+            .grid-row
+              .grid-col-lg-4
+                .pre .grid-col-lg-4
+              .grid-col-lg-11
+                .pre .grid-col-lg-11
+            .grid-row
+              .grid-col-lg-3
+                .pre .grid-col-lg-3
+              .grid-col-lg-12
+                .pre .grid-col-lg-12
+            .grid-row
+              .grid-col-lg-2
+                .pre .grid-col-lg-2
+              .grid-col-lg-13
+                .pre .grid-col-lg-13
+    aside.ui-sidebar
+      button.btn.btn-default.btn-sidebar-toggle.is-xl-hidden(data-add-class)
+        span.icon-bar
+        span.icon-bar
+        span.icon-bar
+      .frame
+        .scroll-holder
+          h3
+            a(href="#color-palette") Color Palette
+          h3
+            a(href="#typography") Typography
+          ul
+            li
+              a(href="#headings") Headings
+            li
+              a(href="#paragraphs") Paragraphs
+          h3
+            a(href="#atoms") Atoms
+          ul
+            li
+              a(href="#links") Links
+            li
+              a(href="#number") Number
+            li
+              a(href="#buttons") Buttons
+            li
+              a(href="#form-elements") Form elements
+          h3
+            a(href="#molecules") Molecules
+          ul
+            li
+              a(href="#items") Items
+            li
+              a(href="#media") Media
+            li
+              a(href="#table") Table
+            li
+              a(href="#gallery-item") Gallery item
+            li
+              a(href="#list") Lists
+          h3
+            a(href="#templates") Templates
+          ul
+            li
+              a(href="#layout") Layout
+          h3
+            a(href="#pages") Pages
+          ul
+            li
+              a(href="#example-page") Example page
+    //ui holder ends
+  //wrapper ends

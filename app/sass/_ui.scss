@@ -1,0 +1,163 @@
+//
+// UI
+// --------------------------------------------------
+
+// UI layout
+// --------------------------------------------------
+
+// UI container
+.ui-container {
+  @include transition(padding-left .3s);
+  padding: 0 20px 0 88px;
+  @media only screen and (min-width: $xl-breakpoint) {
+    @include transition(none);
+    padding-left: 260px;
+  }
+  // styles for shown sidebar
+  // #wrapper.active & {padding-left: 211px;}
+}
+
+// UI header
+.ui-header {
+  background: $brand-primary-light;
+  padding-top: $padding-large-vertical;
+  padding-bottom: $padding-large-vertical;
+  text-align: center;
+}
+.ui-logo {margin: 0 auto $padding-large-vertical;}
+.ui-header-title {
+  color: $white;
+  font-size: $font-size-h1 / 2;
+  @media only screen and (min-width: $lg-breakpoint) {font-size: $font-size-h1;}
+}
+
+// UI main
+.ui-main {padding: $padding-large-vertical 0;}
+.ui-main-title {
+  border-bottom: 1px solid $brand-primary-light;
+  display: block;
+  font-family: $headings-font-family;
+  font-size: $font-size-h1 / 2;
+  margin-bottom: $padding-large-vertical;
+  padding-bottom: $padding-large-vertical;
+  @media only screen and (min-width: $lg-breakpoint) {font-size: $font-size-h1;}
+}
+.ui-title {
+  color: $brand-primary-light;
+  display: block;
+  font-family: $headings-font-family;
+  font-size: $font-size-h2;
+  margin-bottom: $padding-large-vertical;
+  padding-top: $padding-large-vertical;
+}
+.ui-sub-title {
+  display: block;
+  font-family: $headings-font-family;
+  font-size: $font-size-h3;
+  margin-bottom: $padding-large-vertical;
+  padding-top: $padding-large-vertical;
+}
+
+// Color palette block styles
+.ui-color-box {
+  @include border-radius($border-radius-small);
+  border: 1px solid $gray-lighter;
+  margin: $padding-base-vertical;
+  padding: $padding-base-vertical;
+  text-align: center;
+}
+.ui-color-heading {
+  display: block;
+  font-family: $headings-font-family;
+  font-size: $font-size-h4;
+  .ui-color-primary & {color: $brand-primary;}
+  .ui-color-primary-light & {color: $brand-primary-light;}
+  .ui-color-success & {color: $brand-success;}
+  .ui-color-info & {color: $brand-info;}
+  .ui-color-warning & {color: $brand-warning;}
+  .ui-color-danger & {color: $brand-danger;}
+}
+.ui-color-box-example {
+  height: 200px;
+  .ui-color-primary & {background: $brand-primary;}
+  .ui-color-primary-light & {background: $brand-primary-light;}
+  .ui-color-success & {background: $brand-success;}
+  .ui-color-info & {background: $brand-info;}
+  .ui-color-warning & {background: $brand-warning;}
+  .ui-color-danger & {background: $brand-danger;}
+}
+
+// UI Sidebar
+.ui-sidebar {
+  @include box-shadow(0 0 10px rgba($black, .5));
+  @include transform(translateZ(0));
+  @include transition(left .3s);
+  background: #ccc;
+  bottom: 0;
+  left: -123px;
+  padding: 60px 20px 20px 20px;
+  position: fixed;
+  top: 0;
+  width: 151px;
+  @media only screen and (min-width: $xl-breakpoint) {
+    @include transition(none);
+    left: 0;
+    padding-top: 20px;
+    width: 200px;
+  }
+  // styles for shown sidebar
+  #wrapper.active & {
+    left: 0;
+    .frame {
+      display: block;
+      margin-left: 0;
+    }
+    .scroll-holder {overflow: auto;}
+  }
+  .btn-sidebar-toggle {
+    position: absolute;
+    right: 12px;
+    top: 12px;
+  }
+  .frame {
+    @include transition(margin-left .3s);
+    margin-left: -50px;
+    position: relative;
+    height: 100%;
+    @media only screen and (min-width: $xl-breakpoint) {
+      @include transition(none);
+      margin-left: 0;
+    }
+  }
+  .scroll-holder {
+    overflow: hidden;
+    @media only screen and (min-width: $xl-breakpoint) {overflow: auto;}
+    h3:first-child {
+      margin-top: 0;
+      @media only screen and (min-width: $xl-breakpoint) {margin-top: 23px;}
+    }
+  }
+  a {
+    color: $black;
+    .is-desktop & {
+      &:hover {color: $black;}
+    }
+  }
+}
+
+// Sidebar toggle
+.btn-sidebar-toggle {
+  min-width: 0;
+  outline: none;
+  padding: 9px 10px;
+  width: auto;
+  .icon-bar {
+    background: $gray-dark;
+    border-radius: 1px;
+    display: block;
+    height: 2px;
+    width: 22px;
+    margin-top: 4px;
+    &:first-child {margin-top: 0;}
+  }
+}

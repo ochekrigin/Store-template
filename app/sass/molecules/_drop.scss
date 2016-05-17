@@ -1,0 +1,56 @@
+//
+// Drop
+// --------------------------------------------------
+
+// Base styles
+// --------------------------------------------------
+.drop-box {
+  @include transition(max-height, 0.5s, ease-out);
+  display: none;
+  left: -19px;
+  max-height: 0;
+  overflow: hidden;
+  padding: 0 10px;
+  top: 100%;
+  @media only screen and (min-width: $lg-breakpoint) {
+    display: block;
+    position: absolute;
+  }
+  li:hover & {
+    .is-desktop & {
+      @include transition(max-height, 0.5s, ease-out);
+      height: 300px;
+      max-height: 300px;
+    }
+  }
+  .active & {
+    max-height: 100%;
+    @media only screen and (min-width: $lg-breakpoint) {
+      @include transition(max-height, 0.5s, ease-out);
+      height: 300px;
+      max-height: 300px;
+    }
+  }
+}
+.drop {
+  background: $gray-dark;
+  @media only screen and (min-width: $lg-breakpoint) {
+    width: 278px;
+    @include box-shadow(0 5px 8px rgba(0,0,0,0.5));
+  }
+  .active & {top: 0;}
+  .vertical-list {
+  	margin: 0;
+    padding: 0;
+  	.fa-angle-right {color: $white;}
+  }
+
+  .vertical-list {
+    a {
+      padding: 0 10px 0 0;
+      @media only screen and (min-width: $lg-breakpoint) {
+        padding: 17px 40px 15px 22px;
+      }
+    }
+  }
+}

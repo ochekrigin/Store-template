@@ -1,0 +1,103 @@
+//
+// Media
+// --------------------------------------------------
+
+// Base styles
+// --------------------------------------------------
+
+.media {
+  margin: 0;
+  position: relative;
+  .img-holder {margin: 0;}
+  .post & {margin: -25px -22px;}
+  img {
+    display: block;
+    height: auto;
+    width: 100%;
+  }
+  .price {
+    margin: 0;
+    padding: 0 0 6px;
+    .post & {
+     @media only screen and (min-width: $lg-breakpoint) {margin: -19px 0 0;}
+     @media only screen and (min-width: $xl-breakpoint) {
+        margin: 0 -5px;
+        padding: 14px 0 0;
+      }
+    }
+    &.price-large {
+      .post & {
+       margin: -6px 0 4px;
+       padding: 0;
+       @media only screen and (min-width: $xl-breakpoint) {
+          margin: 3px 0 -5px -8px;
+          padding: 0;
+        }
+      }
+    }
+    @media only screen and (min-width: $xl-breakpoint) {margin: -19px 0 0;}
+    @media only screen and (min-width: $lxl-breakpoint) {
+      margin: 3px 0 -4px -8px;
+      padding: 14px 0 0;
+    }
+    @media only screen and (min-width: $lxl-breakpoint + 100px) {margin: 0;}
+  }
+  &.with-max-width {max-width: 300px;}
+}
+
+// Horizontal view styles
+// --------------------------------------------------
+
+.horizontal {
+  margin-bottom: 20px;
+  @media only screen and (min-width: $xl-breakpoint) {margin-bottom: 32px;}
+}
+.caption {
+  padding: 10px;
+  .price {padding: 0 0 6px;}
+  @media only screen and (min-width: $lxl-breakpoint + 20px) {padding: 20px 22px 25px;}
+  .horizontal & {
+    @include box-sizing(border-box);
+    bottom: 0;
+    margin: 0;
+    padding: 14px 12px;
+    position: absolute;
+    right: 0;
+    text-align: right;
+    width: 100%;
+    @media only screen and (min-width: $lg-breakpoint) {padding: 22px 23px;}
+  }
+  &.light-gray-scheme {
+    background: none;
+    padding: 5px 0 10px;
+    @media only screen and (min-width: $lg-breakpoint) {
+      background: #ececec;
+      padding: 10px;
+    }
+    @media only screen and (min-width: $xl-breakpoint) {padding: 10px 10px 15px;}
+    @media only screen and (min-width: $xl-breakpoint + 20px) {padding: 14px 22px 26px;}
+    .btn-holder {
+      bottom: 37px;
+      padding: 0;
+      position: absolute;
+      right: 0;
+      @media only screen and (min-width: $lg-breakpoint) {
+        padding: 10px 0 0;
+        position: static;
+      }
+      @media only screen and (min-width: $xl-breakpoint) {padding: 18px 0 0;}
+    }
+    .btn {
+      height: 35px;
+      line-height: $line-height-computed + 3px;
+      .collapse & {
+        height: 44px;
+        line-height: 33px;
+      }
+      @media only screen and (min-width: $lg-breakpoint) {
+        height: 49px;
+        line-height: $line-height-primary + 4px;
+      }
+    }
+  }
+}

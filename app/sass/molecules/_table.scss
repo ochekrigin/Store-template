@@ -1,0 +1,90 @@
+//
+// Table
+// --------------------------------------------------
+
+// Base styles
+// --------------------------------------------------
+
+.table {
+  border-collapse: collapse;
+  margin: 0 0 10px;
+  width: 100%;
+  @media only screen and (min-width: $lg-breakpoint) {margin: 0 0 15px;}
+  @media only screen and (min-width: $xl-breakpoint) {margin: 0 0 36px;}
+  &.middle-b-indent {margin: 0 0 21px;}
+  th {
+    background: $gray-dark;
+    color: $white;
+    display: none;
+    font-weight: 700;
+    padding: 0;
+    padding: 14px 20px 13px;
+    @media only screen and (min-width: $md-breakpoint) {display: table-cell;}
+    &.full-width {width: 100%;}
+  }
+  .fa-refresh {
+    margin: 12px 0 0;
+    @media only screen and (min-width: $lg-breakpoint) {margin: 0;}
+  }
+  td {
+    @include box-sizing(border-box);
+    background: #e7e7e7;
+    border-top: 1px solid $input-placeholder-color;
+    display: block;
+    padding: 13px 20px;
+    text-align: center;
+    @media only screen and (min-width: $md-breakpoint) {
+      display: table-cell;
+      text-align: left;
+      &.cell-1 {width: 21.7%;}
+      &.cell-2 {width: 29%;}
+      &.cell-3 {width: 29.44%;}
+      &.cell-4 {width: 11.56%;}
+      &.cell-5 {width: 2.3%;}
+    }
+    &.text-right {
+      text-align: left !important;
+      @media only screen and (min-width: $md-breakpoint) {text-align: right !important;}
+    }
+  }
+  .odd {
+    td {background: $gray;}
+  }
+  a {
+    color: $gray-dark;
+    .is-desktop & {
+      &:hover {color: $brand-warning;}
+    }
+  }
+  p {margin: 0;}
+  .form-element {
+    display: inline-block;
+    height: 45px;
+    margin: 5px 0;
+    vertical-align: middle;
+    width: 100%;
+    @media only screen and (min-width: $lg-breakpoint) {width: 100%;}
+    @media only screen and (min-width: $xl-breakpoint) {
+      margin: 0 6px;
+      width: 48px;
+    }
+    @media only screen and (min-width: $lxl-breakpoint + 5px) {
+      margin: 0 15px;
+      width: 54px;
+    }
+  }
+  .price {
+    display: inline-block;
+    padding: 0;
+    vertical-align: middle;
+  }
+  .fa-times {
+    color: #c1c1c1;
+    font-size: $font-size-large + 5px;
+  }
+  img {
+    display: block;
+    margin: 0 auto;
+    @media only screen and (min-width: $lg-breakpoint) {margin: 7px 0;}
+  }
+}

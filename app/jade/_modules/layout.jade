@@ -1,0 +1,68 @@
+include ../_dev/common
+include ../_atoms/common
+doctype html
+= "\n\r"
+<html lang="en">
+head
+  meta(charset="utf-8")
+  meta(name="viewport", content="width=device-width, initial-scale=1.0, maximum-scale=1.0")
+  title= projectName
+  block fonts
+  // build:remove 
+  block bowerStyles
+  link(rel='stylesheet', href='../bower_components/fancybox/source/jquery.fancybox.css')
+  // /build 
+  +replaceTpl('markup')
+    block markupStyles
+    link(rel='stylesheet', href='css/fancybox/jquery.fancybox.css')
+  // build:css:build css/adena.min.css 
+  block styles
+    link(rel="stylesheet", href="css/all.css")
+  // /build 
+  = "\n\r  "
+  +ie('if IE 9')
+    link(rel="stylesheet", href="css/ie9.css")
+  // build:remove 
+  // /build 
+  +ieTpl
+body
+  block body
+  script(type='text/javascript').
+    WebFontConfig = {
+      google: { families: [ 'Cuprum:400,400italic,700,700italic:latin' ] }
+    };
+    (function() {
+      var wf = document.createElement('script');
+      wf.src = 'https://ajax.googleapis.com/ajax/libs/webfont/1/webfont.js';
+      wf.type = 'text/javascript';
+      wf.async = 'true';
+      var s = document.getElementsByTagName('script')[0];
+      s.parentNode.insertBefore(wf, s);
+    })();
+  // build:remove 
+  block bowerScripts
+    script(src="../bower_components/jquery/dist/jquery.min.js")
+    script(src="../bower_components/jquery-placeholder/jquery.placeholder.js")
+    script(src="../bower_components/hammerjs/hammer.min.js")
+    script(src="../bower_components/fancybox/source/jquery.fancybox.js")
+  // /build 
+  +replaceTpl('markup')
+    block markupScripts
+      script(src="js/plugins/jquery.min.js")
+      script(src="js/plugins/jquery.placeholder.min.js")
+      script(src="js/plugins/hammer.min.js")
+      script(src="js/plugins/jquery.fancybox.pack.min.js")
+  // build:remove:build 
+  //include plugins
+  block pluginsScripts 
+    script(src="js/jquery.form-validator.js")
+    script(src="js/2-jquery.slideshow.js")
+    script(src="js/jquery.common.js")
+    script(src="js/1-jquery.utilities.js")
+  //init plugins
+  block initScripts
+    script(src="js/jquery.init-plugins.js")
+  // /build 
+  +replaceTpl('build')
+    script(src="js/adena.min.js")
+!= "\n\r</html>"

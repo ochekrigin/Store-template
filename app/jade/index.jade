@@ -1,0 +1,665 @@
+extends _modules/layout
+block body
+  //wrapper starts
+  #wrapper(itemscope itemtype="http://schema.org/WebPage")
+    //header starts
+    include _modules/header
+    //header ends
+    //main starts
+    #main
+      section.visual
+        h1.accessibility Visual
+        .gallery
+          a.btn-prev.btn-directional(href="#")
+            i.fa.fa-arrow-left
+          ul.slideset
+            li
+              img(src="images/content/img-visual-1.jpg" width="1920" height="530" alt="img-description")
+              .box.text-center
+                .item-table
+                  .item-cell
+                    .container
+                      h2.h1.light-color Een regel voor in deze header
+                      h3.sub-title.light-color Een subregel voor in de header
+                      a.btn.btn-rounded(href="#")
+                        | Conversion button
+                        i.fa.fa-arrow-circle-o-right
+            li
+              img(src="images/content/img-visual-1.jpg" width="1920" height="530" alt="img-description")
+              .box.text-center
+                .item-table
+                  .item-cell
+                    .container
+                      h2.h1.light-color Voor in deze header
+                      h3.sub-title.light-color Voor in de header
+                      a.btn.btn-rounded(href="#")
+                        | Conversion button
+                        i.fa.fa-arrow-circle-o-right
+          a.btn-next.btn-directional(href="#")
+            i.fa.fa-arrow-right
+        .btn-holder.text-center
+          a.btn-directional(href="#" data-scroll-to="info")
+            i.fa.fa-arrow-down
+      .content-section.gray-scheme
+        .container
+          .grid-row.no-b-indent
+            .grid-col-xs-15.grid-col-lg-9
+              ul.list
+                li
+                  a(href="#")
+                    i.fa.fa-check
+                    | Een unieke USP regel
+                li
+                  a(href="#")
+                    i.fa.fa-check
+                    | Een unieke USP regel
+                li
+                  a(href="#")
+                    i.fa.fa-check
+                    | Een unieke USP regel
+            .grid-col-xs-15.grid-col-lg-6.lg-text-right
+              a(href="#")
+                i.fa.fa-download
+                | Download onze brochure
+      .content-section.with-divider
+        .container
+          .grid-row.no-b-indent
+            .grid-col-xs-15.grid-col-lg-8
+              ul.breadcrumbs.list(vocab="http://schema.org/" typeof="BreadcrumbList")
+                li(property="itemListElement" typeof="ListItem")
+                  a(href="#" property="item" typeof="WebPage")
+                    span(property="name") Homepage
+                  i.fa.fa-angle-right
+                li(property="itemListElement" typeof="ListItem")
+                  a(href="#" property="item" typeof="WebPage")
+                    span(property="name") Subpage
+                  i.fa.fa-angle-right
+                li(property="itemListElement" typeof="ListItem")
+                 span(property="name") Subpage
+            .grid-col-xs-15.grid-col-lg-7.lg-text-right
+              a.btn.btn-primary.btn-rounded(href="#")
+                i.fa.fa-angle-left
+                | Ga terug
+      .content-section.with-divider
+        .container
+          dl.definition-list
+            dt Deel deze pagina
+            dd
+              ul.list.social
+                li
+                  a(href="#")
+                    i.fa.fa-facebook-official
+                li
+                  a(href="#")
+                    i.fa.fa-twitter-square
+                li
+                  a(href="#")
+                    i.fa.fa-whatsapp
+                li
+                  a(href="#")
+                    i.fa.fa-pinterest
+      .content-section.text-center.large-t-indent(data-scroll-section="info")
+        .container
+          h2.h1 Onderwerp van de website
+          h3.h2 een subregel voor dit onderwerp
+          p At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi sint occaecati cupiditate non provident, similique sunt in culpa qui officia deserunt mollitia animi, id est laborum et dolorum fuga.<br> Et harum quidem rerum facilis est et expedita distinctio. Nam libero tempore.
+          .btn-holder.top-indent
+            a.btn.btn-rounded(href="#")
+              | Conversion button
+              i.fa.fa-arrow-circle-o-right
+      .content-section.light-gray-scheme.large-t-indent
+        .container
+          h2.h1
+            | Main korte titel
+            a(href="#").link.link-orange Bekijk alles
+          .grid-row.no-b-indent
+            .grid-col-xs-15.grid-col-sm-7.grid-col-lg-5
+              article.post
+                figure.media
+                  .img-holder
+                    img(src="images/content/img-post-1.jpg" width="380" height="220" alt="img-description")
+                  figcaption.caption
+                    h3 Upiditate non provident, similique sunt in culpa sunt in culpa
+                    p At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi sint occaecati cupiditate non provident, similique sunt in
+                    .grid-row.no-b-indent
+                      .grid-col-xs-15.grid-col-xl-4.xl-text-right.align-right
+                        span.price.lg-visible 1892,95 EUR
+                      .grid-col-xs-15.grid-col-xl-11
+                        a.btn.btn-rounded(href="#")
+                          | Conversion button
+                          i.fa.fa-arrow-circle-o-right
+            .grid-col-xs-15.grid-col-sm-7.grid-col-lg-5.align-right
+              article.post
+                figure.media
+                  .img-holder
+                    img(src="images/content/img-post-1.jpg" width="380" height="220" alt="img-description")
+                  figcaption.caption
+                    h3 Upiditate non provident, similique sunt in culpa sunt in culpa
+                    p At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi sint occaecati cupiditate non provident, similique sunt in
+                    a.btn.btn-rounded(href="#")
+                      | Conversion button
+                      i.fa.fa-arrow-circle-o-right
+            .grid-col-xs-15.grid-col-sm-7.grid-col-lg-5
+              article.post
+                figure.media
+                  .img-holder
+                    img(src="images/content/img-post-1.jpg" width="380" height="220" alt="img-description")
+                  figcaption.caption
+                    h3 Upiditate non provident, similique sunt in culpa sunt in culpa
+                    p At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi sint occaecati cupiditate non provident, similique sunt in
+                    a.btn.btn-rounded(href="#")
+                      | Conversion button
+                      i.fa.fa-arrow-circle-o-right
+          .btn-holder.t-indent
+            a.btn.btn-rounded.btn-secondary(href="#")
+              | SECONDARY BUTTON
+              i.fa.fa-arrow-circle-o-right
+      .content-section.add-t-indent.with-bg
+        .container
+          .grid-row.no-b-indent
+            .grid-col-xs-15.grid-col-sm-7.grid-col-lg-7
+              article.post
+                figure.media
+                  .img-holder
+                    img(src="images/content/img-post-1.jpg" width="380" height="220" alt="img-description")
+                  figcaption.caption
+                    h3 Upiditate non provident, similique sunt in culpa sunt in culpa
+                    p At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi sint occaecati cupiditate non provident, similique sunt in culpa qui officia deserunt mollitia animi, id est laborum et dolorum fuga.
+                    a.btn.btn-rounded(href="#")
+                      | Conversion button
+                      i.fa.fa-arrow-circle-o-right
+            .grid-col-xs-15.grid-col-sm-7.grid-col-lg-7.align-right
+              article.post
+                figure.media
+                  .img-holder
+                    img(src="images/content/img-post-1.jpg" width="380" height="220" alt="img-description")
+                  figcaption.caption
+                    h3 Upiditate non provident, similique sunt in culpa sunt in culpa
+                    p At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi sint occaecati cupiditate non provident, similique sunt in culpa qui officia deserunt mollitia animi, id est laborum et dolorum fuga.
+                    a.btn.btn-rounded(href="#")
+                      | Conversion button
+                      i.fa.fa-arrow-circle-o-right
+      .content-section.large-t-indent
+        .container
+          .grid-row.no-b-indent
+            .grid-col-xs-15.grid-col-lg-4.sidebar
+              .collapse-box(data-add-class-parent)
+                a(href="#" data-slider-opener).opener.lg-hidden
+                  | CUSTOMER SERVICE
+                  i.fa.fa-arrow-circle-o-down
+                .collapse
+                  .block
+                    ul.list.vertical-list
+                      li
+                        a(href="#").active
+                          | Menu item lorem ipsum
+                          i.fa.fa-arrow-circle-o-right
+                      li
+                        a(href="#")
+                          | Menu item lorem ipsum with a long menu title
+                          i.fa.fa-arrow-circle-o-right
+                      li
+                        a(href="#")
+                          | Menu item lorem ipsum
+                          i.fa.fa-arrow-circle-o-right
+                      li
+                        a(href="#")
+                          | Menu item lorem ipsum
+                          i.fa.fa-arrow-circle-o-right
+                      li
+                        a(href="#")
+                          | Menu item lorem ipsum
+                          i.fa.fa-arrow-circle-o-right
+                  .block
+                    article.post
+                      figure.media
+                        .img-holder
+                          img(src="images/content/img-post-2.jpg" width="292" height="108" alt="img-description")
+                        figcaption.caption.light-gray-scheme
+                          h3 Upiditate non provident, similique sunt in culpa sunt in culpa
+                          p At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis.
+                          a.btn.btn-rounded.btn-secondary.without-min-width(href="#")
+                            | SECONDARY BUTTON
+                            i.fa.fa-arrow-circle-o-right.xl-with-indent
+              .collapse-box(data-add-class-parent data-items-box)
+                a(href="#" data-slider-opener).opener.lg-hidden
+                  | FILTER
+                  i.fa.fa-arrow-circle-o-down
+                .collapse
+                  .heading(data-inner-slider-opener)
+                    .grid-row.no-b-indent
+                      .grid-col-xs-9
+                        h3 Kleur
+                      .grid-col-xs-6.text-right
+                        a(href="#").link.link-gray.m-hidden reset
+                  .inner-collapse
+                    .checkbox
+                      input(type="checkbox" id="type-1")
+                      label(for="type-1")
+                        | Checkbox label
+                        span (23)
+                    .checkbox
+                      input(type="checkbox" id="type-2")
+                      label(for="type-2")
+                        | Checkbox label
+                        span (23)
+                    .checkbox
+                      input(type="checkbox" id="type-3")
+                      label(for="type-3")
+                        | Checkbox label
+                        span (23)
+                    .checkbox
+                      input(type="checkbox" id="type-4")
+                      label(for="type-4")
+                        | Checkbox label
+                        span (23)
+                    .checkbox
+                      input(type="checkbox" id="type-5")
+                      label(for="type-5")
+                        | Checkbox label
+                        span (23)
+                    .checkbox(data-item).is-hidden
+                      input(type="checkbox" id="type-6")
+                      label(for="type-6")
+                        | Checkbox label
+                        span (22)
+                    .checkbox(data-item).is-hidden
+                      input(type="checkbox" id="type-7")
+                      label(for="type-7")
+                        | Checkbox label
+                        span (24)
+                    a(href="#" data-link).link.link-gray
+                      span.text-show Toon meer (<span class="count">2</span>)
+                      span.text-close Sluiten
+                    .btn-holder.lg-hidden
+                      a.btn.btn-rounded.btn-secondary(href="#" data-scroll-to="products")
+                        | SECONDARY BUTTON
+                        i.fa.fa-arrow-circle-o-right
+            .grid-col-xs-15.grid-col-lg-11
+              h2.h1 Main korte titel 
+              h3.h2.small-b-indent een subregel voor dit onderwerp
+              p.lead At vero eos et accusamus et iusto odio dignissimos <a href="#" class="link link-orange">ducimus qui blanditiis</a> praesentium voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi sint occaecati cupiditate non provident, similique sunt in culpa qui officia deserunt mollitia animi, id est laborum et dolorum. At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti atque corrupti
+              p.lead Quos dolores et quas molestias excepturi sint occaecati cupiditate non provident, similique sunt in culpa qui officia deserunt mollitia animi, id est laborum et dolorum fuga. At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi sint occaecati cupiditate non provident, similique sunt in culpa qui officia deserunt mollitia animi, id est laborum et dolorum fuga.
+              ul.bullet-list.list.vertical-list
+                li Quos dolores et quas molestias excepturi
+                li Quos dolores et quas molestias excepturi
+                li Quos dolores et quas molestias excepturi
+              .grid-row.no-b-indent
+                .grid-col-xs-15.grid-col-lg-8
+                  .select-holder.with-max-width
+                    select
+                      option Sorteer op
+                      option Sorteer down
+                .grid-col-xs-15.grid-col-lg-7
+                  ul.list.list-pager
+                    li
+                      a(href="#")
+                        i.fa.fa-angle-left
+                        | vorige
+                    li 1
+                    li
+                      a(href="#") 2
+                    li.dote ...
+                    li
+                      a(href="#") 6
+                    li
+                      a(href="#")
+                        | volgende
+                        i.fa.fa-angle-right
+              .grid-row.no-b-indent(data-scroll-section="products")
+                .grid-col-xs-7.grid-col-lg-5.small-half-width
+                  .block.small-t-indent
+                    article.post(itemscope itemtype="http://schema.org/Product")
+                      figure.media
+                        .img-holder
+                          img(src="images/content/img-post-1.jpg" width="380" height="220" alt="img-description")
+                        figcaption.caption.light-gray-scheme
+                          h3(itemprop="name") Upiditate non provident, similique sunt in culpa sunt in
+                          p.small-indent(itemprop="description") At vero eos et accusamus et iusto odio dignissimos ducimus qui blan <br>ditiis.
+                          .grid-row.no-b-indent(itemprop="offers" itemscope itemtype="http://schema.org/Offer")
+                            .grid-col-xs-15.grid-col-xl-4.inline-block
+                              .old-price(itemprop="price") 1995,95 
+                            .grid-col-xs-15.grid-col-xl-5.inline-block
+                              .price.price-large(itemprop="price") 1892,95
+                            .grid-col-xs-15.grid-col-xl-6.inline-block
+                              .message.success Op voorraad
+                          .btn-holder.no-indent
+                            a.btn.btn-rounded.white-color.without-min-width(href="#")
+                              span.is-hidden.lg-visible Conversion button
+                              i.fa.fa-arrow-circle-o-right.xl-with-indent.sm-no-indent
+                .grid-col-xs-7.grid-col-lg-5.small-half-width
+                  .block.small-t-indent
+                    article.post(itemscope itemtype="http://schema.org/Product")
+                      figure.media
+                        .img-holder
+                          img(src="images/content/img-post-1.jpg" width="380" height="220" alt="img-description")
+                        figcaption.caption.light-gray-scheme
+                          h3(itemprop="name") Upiditate non provident, similique sunt in culpa sunt in
+                          p.small-indent(itemprop="description") At vero eos et accusamus et iusto odio dignissimos ducimus qui blan <br>ditiis.
+                          .grid-row.no-b-indent(itemprop="offers" itemscope itemtype="http://schema.org/Offer")
+                            .grid-col-xs-15.grid-col-xl-4.inline-block
+                              .old-price(itemprop="price") 1995,95 
+                            .grid-col-xs-15.grid-col-xl-5.inline-block
+                              .price.price-large(itemprop="price") 1892,95
+                            .grid-col-xs-15.grid-col-xl-6.inline-block
+                              .message.success Op voorraad
+                          .btn-holder.no-indent
+                            a.btn.btn-rounded.white-color.without-min-width(href="#")
+                              span.is-hidden.lg-visible Conversion button
+                              i.fa.fa-arrow-circle-o-right.xl-with-indent.sm-no-indent
+                .grid-col-xs-7.grid-col-lg-5.small-half-width
+                  .block.small-t-indent
+                    article.post(itemscope itemtype="http://schema.org/Product")
+                      figure.media
+                        .img-holder
+                          img(src="images/content/img-post-1.jpg" width="380" height="220" alt="img-description")
+                        figcaption.caption.light-gray-scheme
+                          h3(itemprop="name") Upiditate non provident, similique sunt in culpa sunt in
+                          p.small-indent(itemprop="description") At vero eos et accusamus et iusto odio dignissimos ducimus qui blan <br>ditiis.
+                          .grid-row.no-b-indent(itemprop="offers" itemscope itemtype="http://schema.org/Offer")
+                            .grid-col-xs-15.grid-col-xl-4.inline-block
+                              .old-price(itemprop="price") 1995,95 
+                            .grid-col-xs-15.grid-col-xl-5.inline-block
+                              .price.price-large(itemprop="price") 1892,95
+                            .grid-col-xs-15.grid-col-xl-6.inline-block
+                              .message.success Op voorraad
+                          .btn-holder.no-indent
+                            a.btn.btn-rounded.white-color.without-min-width(href="#")
+                              span.is-hidden.lg-visible Conversion button
+                              i.fa.fa-arrow-circle-o-right.xl-with-indent.sm-no-indent
+              section.info-section
+                h2.h1 Main korte titel 
+                h3.h2.small-b-indent een subregel voor dit onderwerp
+                .grid-row.no-b-indent
+                  .grid-col-xs-15.grid-col-lg-8
+                    p At vero eos et accusamus et iusto odio dignissimos <a href="#" class="link link-orange">ducimus qui blanditiis</a> praesentium voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi sint occaecati cupiditate non provident, similique sunt in culpa qui officia deserunt mollitia animi, id est laborum et dolorum. At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti atque corrupti 
+                    p Quos dolores et quas molestias excepturi sint occaecati cupiditate non provident, similique sunt in culpa qui officia deserunt mollitia animi, id est laborum et dolorum fuga. At vero eos et accusa mus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum
+                  .grid-col-xs-15.grid-col-lg-7
+                    figure.media.horizontal
+                      img(src="images/content/img-post-3.jpg" width="382" height="263" alt="img-description")
+                      figcaption.caption
+                        a.btn.btn-gray(href="http://farm2.staticflickr.com/1617/24108587812_6c9825d0da_b.jpg" data-fancybox-group="gallery1").fancybox
+                          i.fa.fa-clone
+                          span.lg-visible 2 foto’s
+                h3.h2.small-b-indent Een subregel voor dit onderwerp
+                .grid-row.no-b-indent.frame-holder
+                  .grid-col-xs-7.grid-col-md-7.grid-col-xl-8
+                    figure.media.horizontal
+                      img(src="images/content/img-post-4.jpg" width="460" height="263" alt="img-description")
+                      figcaption.caption
+                        a.btn.btn-gray(href="http://farm2.staticflickr.com/1617/24108587812_6c9825d0da_b.jpg" data-fancybox-group="gallery1").fancybox
+                          i.fa.fa-clone
+                          span.lg-visible 2 foto’s
+                  .grid-col-xs-7.grid-col-md-8.grid-col-xl-7
+                    .message.success.message-horizontal Op voorraad
+                    ul.list.vertical-list.check-list
+                      li Een unieke USP regel
+                      li Een unieke USP regel
+                      li Een unieke USP regel
+                    .row
+                      .old-price.old-price-large 210,95
+                      .price.price-largest 198,95
+                    form.data-form
+                      fieldset
+                        .grid-row.no-b-indent
+                          .grid-col-xs-3
+                            .input-holder
+                              input(type="text" value="1").form-element.text-center
+                          .grid-col-xs-12
+                            .btn-holder
+                              a.btn.btn-rounded(href="#")
+                                | Conversion button
+                                i.fa.fa-arrow-circle-o-right
+                h3.h2.small-b-indent Een subregel voor dit onderwerp
+                figure.media.horizontal
+                  img(src="images/content/img-post-5.jpg" width="860" height="263" alt="img-description")
+                  figcaption.caption
+                    a.btn.btn-gray(href="http://farm2.staticflickr.com/1617/24108587812_6c9825d0da_b.jpg" data-fancybox-group="gallery1").fancybox
+                      i.fa.fa-clone
+                      span.lg-visible 2 foto’s
+                p At vero eos et accusamus et iusto odio dignissimos <a href="#" class="link link-orange">ducimus qui blanditiis</a> praesentium voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi sint occaecati cupiditate non provident, similique sunt in culpa qui officia deserunt mollitia animi, id est laborum et dolorum. At vero eoset accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti atque corrup.
+                table.table
+                  thead
+                    tr
+                      th.text-left Download direct de nieuwste folders
+                      th.text-right Toegevoegd op
+                  tbody
+                    tr.odd
+                      td.text-left
+                        a(href="#")
+                          i.fa.fa-cloud-download
+                          | Company magazine 2016 (pdf)
+                      td.text-right 03 april 2016
+                    tr
+                      td.text-left
+                        a(href="#")
+                          i.fa.fa-file-pdf-o
+                          | Company magazine 2016 (pdf)
+                      td.text-right 03 april 2016
+      .content-section.add-t-indent.with-bg.contacts
+        .container
+          .grid-row.no-b-indent
+            .grid-col-xs-15.grid-col-lg-7
+              h2.h1 Contact opnemen
+              h3.h2 een subregel voor dit onderwerp
+              p At vero eos et accusamus et iusto odio dignissimos praesentium voluptatum deleniti atque corrupti.
+              address(itemprop="address" itemscope itemtype="http://schema.org/PostalAddress")
+                span(itemprop="name") Companyname
+                span(itemprop="streetAddress") Street 23a
+                span(itemprop="addressLocality") 2123SH City Country
+              dl.definition-list.horizontal
+                dt Tel:
+                dd(itemprop="telephone")
+                  a(href="tel:0987654321") 0987 654321
+                dt E-mail:
+                dd(itemprop="email")
+                  a(href="mailto:info@company.com") info@company.com
+              a(href="#")
+                i.fa.fa-map-pin
+                | Klik hier voor onze routebeschrijving
+            .grid-col-xs-15.grid-col-lg-8
+              form.data-form(action="#" novalidate)
+                fieldset
+                  .row-box.error
+                    input(type="text" placeholder="Input value").form-element.secondary-element
+                    .error-message
+                      i.fa.fa-hand-paper-o
+                      | Error message / notice
+                  .grid-row.no-b-indent
+                    .grid-col-xs-15.grid-col-lg-10
+                      .row-box.success
+                        input(type="text" value="Input value").form-element.secondary-element
+                    .grid-col-xs-15.grid-col-lg-5
+                      .row-box
+                        input(type="text" placeholder="Placeholder").form-element.secondary-element
+                  .row-box.error
+                    input(type="text" placeholder="Input value" value="Wrong value").form-element.secondary-element
+                  .row-box
+                    .select-holder
+                      select
+                        option Select box
+                        option Select item 1
+                        option Select item 2
+                  .checkbox
+                    input(type="checkbox" id="type-11")
+                    label(for="type-11") Checkbox label
+                  .radio
+                    input(type="radio" id="radio-type-1" name="name-1")
+                    label(for="radio-type-1") Radio label
+                  a.btn.btn-rounded(href="#")
+                    | Conversion button
+                    i.fa.fa-arrow-circle-o-right
+      .content-section.add-t-indent.with-shadow
+        .container
+          h2.h1.middle-indent Winkelmandje
+          .grid-row.no-b-indent
+              .grid-col-xs-15.grid-col-lg-11
+                table.table.middle-b-indent
+                  thead
+                    tr
+                      th(colspan="5").full-width.text-left Artikelen
+                  tbody
+                    tr
+                      td.cell-1
+                        .img-holder
+                          a(href="#")
+                            img(src="images/content/img-item-1.jpg" width="139" height="100" alt="img-description")
+                      td.cell-2
+                        strong Brand
+                        p Beschrijving van het product
+                        p Productcode: 1234
+                      td.cell-3.text-center.lg-text-left
+                        strong.price 15,95 EUR
+                        input(type="text" value="1").form-element.text-center
+                        a(href="#")
+                          i.fa.fa-refresh
+                      td.cell-4
+                        strong.price 15,95 EUR
+                      td.cell-5
+                        a(href="#")
+                          i.fa.fa-times
+                .wrap
+                  dl.definition-list.total-list.horizontal.align-right
+                    dt Totaal artikelen
+                    dd 15,95 EUR
+                    dt Verzendkosten
+                    dd Gratis
+                .wrap
+                  dl.definition-list.total-list.large-size.horizontal.align-right
+                    dt Totaal
+                    dd 15,95 EUR
+              .grid-col-xs-15.grid-col-lg-4
+                .block-white
+                  h2.h2.smaller-b-indent Kies verzendwijze
+                  .radio.secondary-radio
+                    input(type="radio" id="radio-type-2" name="name-2")
+                    label(for="radio-type-2")
+                      img(src="images/content/img-radio-1.png" width="34" height="34" alt="img-description")
+                      span.frame
+                        span.title Bezorgen
+                        | Gratis bezorgd op uw locatie binnen Nederland.
+                  .radio.secondary-radio.middle-b-indent
+                    input(type="radio" id="radio-type-3" name="name-2")
+                    label(for="radio-type-3")
+                      span.frame
+                        span.title Afhalen
+                        | Gratis bezorgd op uw locatie binnen Nederland.
+          .btn-holder.btn-holder-cols
+            .grid-row.no-b-indent
+              .grid-col-xs-15.grid-col-lg-8
+                a.btn.btn-rounded.btn-secondary(href="#")
+                  | SECONDARY BUTTON
+                  i.fa.fa-arrow-circle-o-right
+              .grid-col-xs-15.grid-col-lg-7.text-right
+                a.btn.btn-rounded(href="#")
+                  | Conversion button
+                  i.fa.fa-arrow-circle-o-right
+      .content-section.add-t-indent.lightest-grey-scheme
+        .container
+          h2.h1 Gallery
+          h3.h2 een subregel voor dit onderwerp
+          .grid-row.no-b-indent(data-parent-box)
+            .grid-col-xs-15.grid-col-sm-5.grid-col-md-3
+              article.item
+                h4.accessibility Item title
+                a(href="http://farm2.staticflickr.com/1617/24108587812_6c9825d0da_b.jpg" data-fancybox-group="gallery1").fancybox
+                  img(src="images/content/img-item-gallery-1.jpg" width="200" height="157" alt="img-description")
+                  i.fa.fa-search-plus
+            .grid-col-xs-15.grid-col-sm-5.grid-col-md-3
+              article.item
+                h4.accessibility Item title
+                a(href="images/content/img-large-lightbox-1.jpg" data-fancybox-group="gallery1").fancybox
+                  img(src="images/content/img-item-gallery-1.jpg" width="200" height="157" alt="img-description")
+                  i.fa.fa-search-plus
+            .grid-col-xs-15.grid-col-sm-5.grid-col-md-3
+              article.item
+                h4.accessibility Item title
+                a(href="http://farm1.staticflickr.com/574/22407305427_69cc6e845f_b.jpg" data-fancybox-group="gallery1").fancybox
+                  img(src="images/content/img-item-gallery-1.jpg" width="200" height="157" alt="img-description")
+                  i.fa.fa-search-plus
+            .grid-col-xs-15.grid-col-sm-5.grid-col-md-3
+              article.item
+                h4.accessibility Item title
+                a(href="http://farm1.staticflickr.com/291/18653638823_a86b58523c_b.jpg" data-fancybox-group="gallery1").fancybox
+                  img(src="images/content/img-item-gallery-1.jpg" width="200" height="157" alt="img-description")
+                  i.fa.fa-search-plus
+            .grid-col-xs-15.grid-col-sm-5.grid-col-md-3
+              article.item
+                h4.accessibility Item title
+                a(href="http://farm2.staticflickr.com/1617/24108587812_6c9825d0da_b.jpg" data-fancybox-group="gallery1").fancybox
+                  img(src="images/content/img-item-gallery-1.jpg" width="200" height="157" alt="img-description")
+                  i.fa.fa-search-plus
+            .grid-col-xs-15.grid-col-sm-5.grid-col-md-3
+              article.item
+                h4.accessibility Item title
+                a(href="http://farm4.staticflickr.com/3691/10185053775_701272da37_b.jpg" data-fancybox-group="gallery1").fancybox
+                  img(src="images/content/img-item-gallery-1.jpg" width="200" height="157" alt="img-description")
+                  i.fa.fa-search-plus
+            .grid-col-xs-15.grid-col-sm-5.grid-col-md-3
+              article.item
+                h4.accessibility Item title
+                a(href="http://farm1.staticflickr.com/574/22407305427_69cc6e845f_b.jpg" data-fancybox-group="gallery1").fancybox
+                  img(src="images/content/img-item-gallery-1.jpg" width="200" height="157" alt="img-description")
+                  i.fa.fa-search-plus
+            .grid-col-xs-15.grid-col-sm-5.grid-col-md-3
+              article.item
+                h4.accessibility Item title
+                a(href="http://farm1.staticflickr.com/291/18653638823_a86b58523c_b.jpg" data-fancybox-group="gallery1").fancybox
+                  img(src="images/content/img-item-gallery-1.jpg" width="200" height="157" alt="img-description")
+                  i.fa.fa-search-plus
+            .grid-col-xs-15.grid-col-sm-5.grid-col-md-3
+              article.item
+                h4.accessibility Item title
+                a(href="http://farm2.staticflickr.com/1617/24108587812_6c9825d0da_b.jpg" data-fancybox-group="gallery1").fancybox
+                  img(src="images/content/img-item-gallery-1.jpg" width="200" height="157" alt="img-description")
+                  i.fa.fa-search-plus
+            .grid-col-xs-15.grid-col-sm-5.grid-col-md-3
+              article.item
+                h4.accessibility Item title
+                a(href="http://farm4.staticflickr.com/3691/10185053775_701272da37_b.jpg" data-fancybox-group="gallery1").fancybox
+                  img(src="images/content/img-item-gallery-1.jpg" width="200" height="157" alt="img-description")
+                  i.fa.fa-search-plus
+          .btn-holder.text-center.smaller-indents
+            a.btn.btn-rounded.btn-secondary(href="#" data-url="inc/gallery-items.html" data-request-link)
+              | MEER LADEN
+              i.fa.fa-arrow-circle-o-down
+      .content-section.larger-t-indent.dark-grey-scheme
+        .container
+          .grid-row.no-b-indent
+            .grid-col-xs-15.grid-col-lg-3
+              a(href="#")
+                img(src="images/content/img-logo-2.jpg" width="200" height="200" alt="img-description").logo.no-indents
+            .grid-col-xs-15.grid-col-lg-5
+              .frame-box(itemscope itemtype="http://schema.org/Organization")
+                h2.h2.middle-b-indent Meer weten?
+                p.lead-large-indent At vero eos et accusamus et iusto odio dignissimos praesentium voluptatum deleniti atque corrupti.
+                address.no-indent(itemprop="address" itemscope itemtype="http://schema.org/PostalAddress")
+                  span(itemprop="name") Companyname
+                  span(itemprop="streetAddress") Street 23a
+                  span(itemprop="addressLocality") 2123SH City Country
+                dl.definition-list.horizontal
+                  dt Tel:
+                  dd(itemprop="telephone")
+                    a(href="tel:0987654321") 0987 654321
+                  dt E-mail:
+                  dd(itemprop="email")
+                    a(href="mailto:info@company.com") info@company.com
+            .grid-col-xs-15.grid-col-lg-7
+              form.data-form.with-divider(action="#" novalidate)
+                fieldset
+                  h2.h2.middle-b-indent Altijd op de hoogte zijn?
+                  p.lead-large-indent At vero eos et accusamus et iusto odio dignissimos praesentium voluptatum deleniti atque corrupti.
+                  .row-box
+                    input(type="text" placeholder="Your name").form-element.secondary-element
+                  .row-box
+                    input(type="email" placeholder="E-mailaddress").form-element.secondary-element
+                  a.btn.btn-rounded(href="#")
+                    | Conversion button
+                    i.fa.fa-arrow-circle-o-right
+    //main ends
+    //footer starts
+    include _modules/footer
+    a.btn-top(href="#" data-scroll-to="header")
+      i.fa.fa-arrow-up
+    //footer ends
+  //wrapper ends

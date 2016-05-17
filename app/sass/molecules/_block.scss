@@ -1,0 +1,71 @@
+//
+// Block
+// --------------------------------------------------
+
+// Base styles
+// --------------------------------------------------
+
+.block {
+  background: $gray-lighter;
+  border-bottom: 1px solid $gray-light;
+  margin-bottom: 20px;
+  overflow: hidden;
+  padding: 20px 29px 2px;
+  @media only screen and (min-width: $lg-breakpoint) {border: 1px solid $gray-light;}
+  .content-section & {
+    margin: 0 0 23px;
+    @media only screen and (min-width: $lg-breakpoint) {margin: 11px 9px 23px 0;}
+    &.small-t-indent {
+      margin: 14px 0 0 0;
+      @media only screen and (min-width: $lg-breakpoint) {margin: 21px 0 0;}
+    }
+  }
+  .list {
+    border-bottom: 1px solid $gray-light;
+    line-height: $line-height-computed - 3px;
+    margin: -21px -29px -2px;
+    > li {border-color: $gray-light;}
+    a {
+      padding: 12px 30px 12px 10px;
+      @media only screen and (min-width: $xl-breakpoint) {padding: 18px 40px 19px 22px;}
+      .fa {display: none;}
+      &:hover,
+      &.active {
+        color: $brand-warning;
+        .fa {display: block;}
+      }
+    }
+  }
+  a {
+    color: #1a0000;
+    &.white-color {color: $white;}
+  }
+}
+
+// Block modifications
+// --------------------------------------------------
+
+.block-white {
+  background: $white;
+  border: 1px solid $gray-dark;
+  color: #1a0000;
+  margin: 0 0 15px;
+  padding: 18px 22px;
+}
+
+// Heading base styles
+// --------------------------------------------------
+
+.heading {
+  background: #e8e8e8;
+  border-bottom: 1px solid $gray;
+  margin: 0 0 -1px;
+  padding: 12px 17px 10px;
+  @media only screen and (min-width: $lg-breakpoint) {
+    background: none;
+    margin: -3px 9px 12px 0;
+    margin: 0 0 12px;
+    padding: 0 6px;
+  }
+  @media only screen and (min-width: $xl-breakpoint) {padding: 0;}
+}
